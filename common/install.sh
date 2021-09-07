@@ -43,8 +43,8 @@ if [ "$VERSION" == "V11" ]; then
     ui_print "- Checking display refresh rate"
     rr=$(settings get system peak_refresh_rate)
     if [ "$rr" == "120.00001" ]; then
-        ui_print "~Your device has 120hz display"
-        ui_print "~Installing boot script for 120hz"
+        ui_print "- Your device has 120hz display"
+        ui_print "- Installing boot script for 120hz"
         r120hz
     elif [ "$rr" == "90.0" ]; then
         ui_print "- Your device has 90hz display"
