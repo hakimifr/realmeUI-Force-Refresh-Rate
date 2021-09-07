@@ -51,16 +51,15 @@ if [ "$VERSION" == "V11" ]; then
         ui_print "- Installing boot script for 90hz display"
         rui290hz
     else
-        abort "- Not supported!"
+        abort "! Not supported!"
     fi
 elif [ "$VERSION" == "V7" ]; then
     ui_print "- realme UI 1 detected"
-    ui_print "I don't know if the module"
-    ui_print "will work for 120hz device,"
-    ui_print "but give it a try and let me"
-    ui_print "know."
+    ui_print "I don't know if the module will work for 120hz"
+    ui_print "device, but give it a try and let me know."
+    ui_print ""
     ui_print "- Installing boot script"
     rui190hz
 else
-    abort "Sorry, your phone is not supported"
+    abort "! Sorry, your phone is not supported"
 fi
