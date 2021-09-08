@@ -16,23 +16,26 @@ ui_print "idk"
 ui_print "contact me on telegram for help:"
 ui_print "https://t.me/Hakimi0804"
 ui_print ""
+ui_print "* note that reboot is not required as the module will"
+ui_print "  run the force refresh rate command when you install it."
+ui_print ""
 
 rui290hz () {
     ui_print ""
-    ui_print "- Installing boot script for realme UI 2.0"
     install_script -l $MODPATH/common/script2.sh
+    service call SurfaceFlinger 1035 i32 1
 }
 
 rui190hz () {
     ui_print ""
-    ui_print "- Installing boot script for realme UI 1"
     install_script -l $MODPATH/common/script1.sh
+    service call SurfaceFlinger 1035 i32 0
 }
 
 r120hz () {
     ui_print ""
-    ui_print "- Installing boot script"
     install_script -l $MODPATH/common/script3.sh
+    service call SurfaceFlinger 1035 i32 2
 }
 
 ui_print "- Checking realme UI version"
@@ -56,7 +59,8 @@ if [ "$VERSION" == "V11" ]; then
 elif [ "$VERSION" == "V7" ]; then
     ui_print "- realme UI 1 detected"
     ui_print "I don't know if the module will work for 120hz"
-    ui_print "device, but give it a try and let me know."
+    ui_print "device on realme UI 1, but give it a try and let"
+    ui_print "me know."
     ui_print ""
     ui_print "- Installing boot script"
     rui190hz
