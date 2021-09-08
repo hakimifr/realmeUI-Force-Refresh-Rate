@@ -23,19 +23,19 @@ ui_print ""
 rui290hz () {
     ui_print ""
     install_script -l $MODPATH/common/script2.sh
-    service call SurfaceFlinger 1035 i32 1
+    service call SurfaceFlinger 1035 i32 1 1>/dev/null
 }
 
 rui190hz () {
     ui_print ""
     install_script -l $MODPATH/common/script1.sh
-    service call SurfaceFlinger 1035 i32 0
+    service call SurfaceFlinger 1035 i32 0 1>/dev/null
 }
 
 r120hz () {
     ui_print ""
     install_script -l $MODPATH/common/script3.sh
-    service call SurfaceFlinger 1035 i32 2
+    service call SurfaceFlinger 1035 i32 2 1>/dev/null
 }
 
 ui_print "- Checking realme UI version"
