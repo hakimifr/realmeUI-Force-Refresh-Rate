@@ -6,6 +6,13 @@ magisk module to force refresh rate on realme UI
 2. cd to the repo
 3. Pack the file with zip or 7z
 4. Open magisk and flash the module
+```
+$ git clone https://github.com/Hakimi0804/realmeUI-Force-Refresh-Rate.git
+$ cd realmeUI-Force-Refresh-Rate
+$ zip -r ForceRefreshRate *
+$ adb push ForceRefreshRate.zip /sdcard
+$ rm ForceRefreshRate.zip
+```
 
 *note: you could remove the .git directory before zipping, but the installer already has .git removal logic*
 
