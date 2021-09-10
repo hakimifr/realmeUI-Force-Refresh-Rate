@@ -1,4 +1,4 @@
-# fuck you shell checker i dont need shebang, stop being red
+#!/system/bin/sh
 
 ui_print ""
 ui_print "- Checking for the presence of .git directory"
